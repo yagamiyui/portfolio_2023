@@ -1,0 +1,234 @@
+@charset "UTF-8";
+@import url(reset.css);
+/*
+
+comon
+
+*/
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    width: 100%;
+    min-width: 1200px;
+}
+
+body{
+    line-height: 1.0;
+    font-family: 'Sawarabi Mincho', sans-serif;
+    font-size: 1.4em;
+    letter-spacing: .2em;
+    background: #000000;
+}
+
+a{
+    color: inherit;
+}
+
+a:hover{
+    color: inherit;
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+/* header */
+#header{
+	height: 60px;/*高さ指定*/
+	width:100%;/*横幅指定*/
+	/*以下はレイアウトのためのCSS*/
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background:#fcfcfc;
+	color:#000000;
+	text-align: center;
+	padding: 20px;
+}
+
+/*JSを使いfixedクラスが付与された際の設定*/
+#header.fixed{
+	position: fixed;/*fixedを設定して固定*/
+  z-index: 999;/*最前面へ*/
+  top:0;/*位置指定*/
+  left:0;/*位置指定*/
+}
+#header h2{
+    text-align: center;
+}
+
+
+/* 
+
+main-visual
+
+*/
+#main-visual{
+    width: 100%;
+    height: 100vh;
+    background: url(../images/chanel\ top.jpg) center/cover no-repeat;
+}
+
+#main-visual .inner{
+    margin-top: auto;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    color: #fff;
+}
+
+#main-visual + section{
+    margin: 0;
+}
+
+#main-visual + section .inner{
+    margin-top: 0;
+}
+
+/* ========== */
+section + section{
+    margin-top: 15rem;
+}
+
+.bg{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bg img{
+    width: calc(75rem (200% - 75rem) /2);
+    margin-bottom: 8rem;
+}
+
+.bg.right img{
+    margin-left: auto;
+}
+.bg.right2{
+    flex-direction: row-reverse;
+}
+
+.bh.left img{
+    margin-right: auto;
+}
+
+.inner{
+    width: 75rem;
+    margin: auto;
+}
+.msyousai{
+    border: solid 1px #fff;
+    padding: 0.5em 1em;
+}
+.msyousai:hover{
+    background: #fff;
+    color: #231815;
+ }
+
+h2{
+    color: #fff;
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+h2 span{
+    display: block;
+    color: #c5a753;
+    font-weight: normal;
+    margin-top: .25em;
+}
+
+.author{
+    font-size: 1em;
+}
+
+.profile{
+    font-size: 1.2em;
+    margin: 2rem 0 12rem;
+}
+
+p{
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 2.0;
+}
+
+p + p{
+    margin-top: 1.5em;
+}
+
+/* 
+slide-in
+ */
+ .slide-in{
+    display: block;
+    width: 100%;
+    height: 40rem;
+    margin-top: 10rem;
+    background: linear-gradient(90deg, black 50%, white 100%);
+    color: #fff;
+    transition: transform 1s cubic-bezier(0.7, 0, 0.84, 0);
+    transform: translateX(-100%);
+    opacity: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    padding-left: 8rem;
+ }
+
+ .slide-in .more{
+    position: absolute;
+    bottom: 5rem;
+    left: 8rem;
+    display: block;
+    border: solid 0.2rem #fff;
+    font-size: .25em;
+    padding: 1em;
+    transition: all .6s;
+ }
+
+ .slide-in img{
+    position: absolute;
+    right: 0;
+    margin: auto;
+    width: auto;
+    height: 40rem;
+    mix-blend-mode: darken;
+ }
+
+ /* 表示領域に入った時のスタイル */
+ .slide-in.show{
+    transform: translateX(0);
+    opacity: 1;
+ }
+
+ .slide-in.show:hover{
+    opacity: .8;
+    color: #fff;
+ }
+
+ .slide-in.show:hover .more{
+    background: #fff;
+    color: #231815;
+ }
+
+ /* 
+ 
+ fotter
+ 
+ */
+ footer{
+    width: 100%;
+    background: #ffffff;
+    text-align: center;
+    padding: 5rem 0;
+ }
+
+ footer small{
+    display: block;
+    padding: 1em 0;
+ }

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>photo-scrollAnimation</title>
+    <!--css-->
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&amp;family=Tangerine&amp;display=swap">
+<!--style.css-->
+<link rel="stylesheet" href="css/style.css">
+<!--aos.css-->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<!-- js -->
+<!-- aos.js -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!--JQuery-->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="header">
+        <h1>CHANEL</h1>
+    </header>
+    <main>
+        <section class="bg" id="main-visual">
+            <div class="inner">
+                <h2>N°5
+                    <span>GIVE WONDER<br>GIVE CHANEL*</span></h2>
+
+                <p>今年のホリデー シーズンは、伝説的なフレグランス、シャネル N°5を中心としたさまざまな限定品が登場。<br>
+                <span class="author">*夢を贈ろう、シャネルを贈ろう</span></p>
+            </div>
+        </section>
+
+        <section class="bg right">
+            <div class="inner">
+                <p class="profile">
+                    
+                </p>
+            </div>
+
+            <img src="images/1693732828119-product0815mlextraitjpg_980x1470.jpg" alt="" data-aos="fade">
+            <div class="inner">
+                <h2>シャネル N°5 パルファムを小さなボトルで</h2>
+                <p>
+                    フローラル アルデヒド フレグランス、シャネル N°5 パルファムは、小さな15mLサイズでもお楽しみいただけます。カットガラスを使用したボトルは〈ボードリュシャージュ〉という技術を使い手作業で密封されています。ダイヤモンドのようなカットが施されたストッパーにより、まといたい場所に正確に、繊細に香りをのせていただけます。
+                </p>
+                <p>  <span class="msyousai">詳細はこちら</span></p>  
+                
+            </div>
+        </section>
+
+        <section class="bg left"><img src="images/holidayparhurm.jpg" alt="" data-aos="fade">
+            <div class="inner">
+                <h2>シャネル N゜5 オードゥ パルファム - ホリデー限定パッケージ</h2>
+                <p>
+                    限定パッケージに収められたシャネル N゜5 オードゥ パルファムが登場。ホワイト＆ゴールドの美しいケースを開けると、伝説的なフレグランスのボトルが優雅に姿を現します。
+                </p>
+                <p>  <span class="msyousai">詳細はこちら</span></p>  
+                </div>
+        </section>
+         
+        <section class="bg right2"><img src="images/tokubetu.jpg" alt="" data-aos="fade">
+            <div class="inner">
+                <h2>シャネル N°5 ザ ボディ オイル 250mL</h2>
+                <p>
+                    贅沢に使える250mLボトルのザ ボディ オイル。センシュアルなN°5の香りを繊細に表現しながら、シルクのようなテクスチャーでなめらかな肌へ導きます。ホリデーのギフトにも最適。
+                </p>
+                <p>  <span class="msyousai">詳細はこちら</span></p>  
+                </div>
+
+                <a class="slide-in" href="https://www.chanel.com/jp/fragrance/n5-marion-cotillard/" target="_blank">
+                    限定品を含むシャネルのホリデー ギフト セレクション。
+                    <span class="more">詳細はこちら</span>
+                    <img src="images/1693731678295-banner3axesjpg_924x2880.jpg" alt="芥川龍之介">
+                </a>
+        </section>
+    </main>
+
+    <footer>
+        <small>&copy; photo-scrollAnimation All Right Reserved.</small>
+    </footer>
+
+    <script>
+        // 【アニメーション】フェードイン
+        AOS.init({
+          offset: 0,      // アニメーションの距離（px）
+          duration: 1000,    // 実行秒数（ミリ秒）
+          easing: 'ease-in',   // イージング（緩急）
+          delay: 400,        // 遅延秒数（ミリ秒）
+          once: false,      // 1回だけかどうか
+          anchorPlacement: 'bottom-top',  // 発火位置指定
+        });
+      
+      
+        // 【アニメーション】スライドイン
+        $(window).on('load', function () {
+          var $slideIn = $('.slide-in'),
+              slideInOffsetTop = $slideIn.offset().top
+              windowH = $(window).height();
+          
+          $(window).on('scroll', function () {
+            // 総スクロール量 > .slide-in - ウィンドウサイズ
+            // => .slide-inが表示領域に入ったら.showを追加、領域外では削除
+            if ($(this).scrollTop() > slideInOffsetTop - windowH) {
+              $slideIn.addClass('show');
+            } else {
+              $slideIn.removeClass('show');
+            }
+          });
+        });
+      </script>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <!--自作のJS-->
+      <script src="header.js"></script>
+</body>
+</html>
