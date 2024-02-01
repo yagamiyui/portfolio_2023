@@ -1,0 +1,269 @@
+@charset "Utf-8";
+@import "ress.min.css";
+/**
+
+comon
+
+**/
+* {
+    box-sizing: border-box;
+}
+
+html{
+    /*文字サイズ*/
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "Noto Sans JP", sans-serif;
+    -moz-font-feature-settings: "palt";
+ -webkit-font-feature-settings: "palt";
+ font-feature-settings: "palt";
+ line-height: 1;
+ /*文字サイズ*/
+ font-size: 1.6em;
+ color: #212121;
+}
+
+a{
+    /*文字色*/
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+a:hover{
+    opacity: 0.8;
+}
+
+img{
+    align-self: center;
+}
+
+address{
+    font-style: normal;
+}
+
+#wrapper{
+    width: 100%;
+    min-width: 125rem;
+}
+/*
+
+header
+
+*/
+header{
+    padding: 3rem;
+    /*子要素をプレックス*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*
+
+main
+
+*/
+main{
+    width: 100%;
+}
+
+/*inner*/
+.inner{
+    /*子要素をプレックス*/
+    display: flex;
+    width: 95rem;
+    /*中央寄せ*/
+    margin: auto;
+}
+
+/*btn*/
+.btn{
+    /*角丸*/
+    border-radius: 2.5rem;
+    /*線（太さ）2rem　（種類)solid （色）black*/
+    border: 0.2rem solid black;
+    padding: 1em 3em;
+}
+
+/*main-visual*/
+.main-visual{
+    width: 100%;
+}
+
+/*
+     site-desc
+     */
+     .site-desc{
+         text-align: center;
+         padding: 4rem 0 8rem;
+     }
+     .site-desc h3{
+         font-size: 5rem;
+         margin: 1em auto;
+     }
+     .site-desc p{
+         /*文字サイズ*/
+         font-size: 2rem;
+         /*行高 1.6文字分*/
+         line-height: 1.6;
+         margin: 1em auto 2em;
+     }
+
+     /*
+     features
+     */
+     .features{
+         /*子要素をプレックス*/
+         display: flex;
+     }
+
+     .feature{
+         /*背景*/
+         background: rgb(197, 215, 236);
+         /*角丸*/
+         border-radius: 10rem;
+         /*幅*/
+         width: calc(100% / 3);
+         padding: 6rem 0 8rem;
+          /*子要素をプレックス*/
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+     }
+   .feature h2{
+          /*外余白-下*/
+          margin-bottom: 1em;
+   }
+   .feature img{
+          /*幅*/
+          width: 50%;
+          /*角丸*/
+/*          border-radius: 50%;*/
+   }
+   .feature p{
+       /*幅*/
+       width: 80%;
+       /*行高　1.5文字分*/
+       line-height: 3;
+       margin-left: auto;
+   }
+
+   /*
+   links
+   */
+   .links{
+       /*子要素をプレックス*/
+       display: flex;
+       padding: 10rem 0;
+   }
+   .links .linkToPage{
+       /*子要素をプレックス*/
+       display: flex;
+       align-items: center;
+       /*幅*/
+       width: 41.6rem;
+       /*高さ*/
+       height: 15.2rem;
+       background: white;
+       border: 0.4rem solid;
+       border-top-color:#ccc;
+       border-right-color: #666;
+       border-bottom-color:#666;
+       border-left-color: #ccc;
+       /*角丸*/
+       border-radius: 0.2rem;
+       padding: 2rem;
+       justify-content: center;
+        }
+ .links .linkToPage h3{
+     /*文字サイズ*/
+     font-size: 2rem;
+     /*外余白　左*/
+     margin-left: 4em;
+     /*行高　1.4文字分*/
+     line-height: 1.4;
+ }
+ .links .linkToPage span{
+     display: block;
+     /*文字サイズ*/
+     font-size: 0.6em;
+ }
+ .links .linkToPage img{
+     width: 10rem;
+ }
+ .links .linkToPage + .linkToPage{
+     /*外余白　左*/
+     margin-left: auto;
+ }
+
+ /*
+ aside
+ */
+ aside{
+     /*背景*/
+     background: #eee; 
+     padding: 10rem 0;
+ }
+ aside .contact-desc p{
+     /*外余白　上*/
+     margin-top: 1em;
+ }
+ aside address{
+     /*幅*/
+     width: 63rem;
+     margin-left: auto;
+ }
+aside .tel, aside .mailForm{
+    text-align: center;
+    /*背景*/
+    background: #ccc;
+    /*角丸*/
+    border-radius: 2rem;
+    /*高さ*/
+    height: 16.2rem;
+    /*子要素をプレックス*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*行高*/
+    line-height: 1.5;
+}
+aside .mailForm{
+    /*外余白　上*/
+    margin-top: 4rem;
+}
+aside span{
+    font-weight: bold;
+    /*文字サイズ*/
+    font-size: 1.5em;
+}
+
+/*
+
+footer
+
+*/
+footer{
+    /*背景*/
+    background: #bbb;
+    padding: 5rem 0 11rem;
+}
+footer .inner{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+footer p{
+    /*外余白　上*/
+    margin-top: 1em;
+    /*行高*/
+    line-height: 1.4;
+}
+footer address{
+    margin: 2em auto;
+    /*行高*/
+    line-height: 1.8;
+}
+     
