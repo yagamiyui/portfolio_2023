@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Sample Web</title>
+    <meta name="description" content="Web制作会社 Sample Webのリクルートサイト">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!----- CSS ----->
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho&display=swap">
+    <!-- chartist.min.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <!-- style.css -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!----- JS ----->
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/b68fb17dce.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <!-- ヘッダー -->
+    <header>
+      <div class="wrapper">
+        <h1>
+          <a href="index.html">
+            <img class="logo" src="images/logo3.png" alt="Web制作会社 Sample Web">
+          </a>
+        </h1>
+        <nav>
+          <ul class="main-nav">
+            <li><a class="menu-home current" href="index.html">ホーム</a></li>
+            <li><a class="menu-job" href="job.html">募集要項</a></li>
+            <li><a class="menu-form" href="form.html">応募</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- メインエリア -->
+    <section class="wrapper home-hero">
+      <h2>一緒に未来を建設しましょう</h2>
+      <p>
+        私たちと一緒に住宅の未来を作りませんか？素敵な仲間を募集しています。 「なりたい自分」になれる場所を、きっと見つけられるはずです。
+      </p>
+      <a href="job.html" class="btn btn-primary">募集要項を見る</a>
+    </section><!-- /.home-hero -->
+
+    <section class="brown-bg">
+      <div class="wrapper content flex-reverse">
+        <div class="home-text">
+          <h2 class="title">住宅メーカーってどんな会社？</h2>
+          <p>
+            当社は多様な職種の従業員が一堂に集まり、協力し合って成長しているプラットフォームです。営業職、建設担当職、事務職、そしてさらに多くの専門性を持つ人々が、それぞれのスキルと情熱を注ぎながら、共通のビジョンの下で働いています。私たちの多様性こそが、私たちを豊かにし、成功に導いています。
+          </p>
+        </div>
+
+        <div class="home-chart">
+          <div class="pie-chart"></div>
+        </div>
+      </div><!-- /.wrapper content -->
+    </section><!-- /.brown-bg -->
+
+    <section class="wrapper content">
+      <div class="home-text">
+        <h2 class="title">充実した福利厚生制度</h2>
+        <p>
+          当社は、従業員の健康と幸福を最優先事項と考え、充実した福利厚生制度を提供しています。私たちは、従業員が安心して働き、自己実現を追求できるように、たくさんの福利厚生制度を提供しています。
+        </p>
+      </div>
+
+      <div class="home-chart">
+        <div class="bar-chart"></div>
+        <p>前年度の育児休業取得者数</p>
+      </div>
+    </section><!-- /.wrapper content -->
+
+    <footer>
+      <a href="job.html" class="btn btn-secondary">募集要項を見る</a>
+      <ul class="footer-nav">
+        <li><a href="#">会社概要</a></li>
+        <li><a href="#">サービス内容</a></li>
+        <li><a href="#">スタッフブログ</a></li>
+        <li><a href="#">お問い合わせ</a></li>
+      </ul>
+    </footer>
+
+    <!-- Chartist -->
+    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
