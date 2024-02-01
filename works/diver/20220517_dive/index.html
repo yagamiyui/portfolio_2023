@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>最短5日でダイバーデビュー！ - MdN DIVE</title>
+    <mata name="description" content="MdN DIVEは千代田区にあるマンツーマンダイビングスクールです。5/31までweb限定キャンペーンを実施中！">
+     <link rel="stylesheet" href="css/style.css">   
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1><img src="images/logo.png" alt="ロゴ:MdN DIVE"></h1>
+        </header>
+
+        <main>
+            <div class="mv-area">
+                <img class="mv-img" src="images/photo_01.jpg" alt="この夏最後のキャンペーン！最短5日でダイバーデビュー！">           
+            </div>
+
+            <section>
+                <div class="section-inner">
+                    <h2>Web限定キャンペーン実施中！</h2>
+                    <p>5/31までにWebでお申し込みいただいた方限定で、特別価格を実施中です。MdN DIVEは安心のマンツーマンレッスン！お友達との参加も可能です。仲間と一緒にダイビングライセンスを取得して、世界中の海を楽しみましょう！</p>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-inner">
+                    <h2>ライセンス取得までの流れ</h2>
+                    <ol>
+                        <li>学科講習(5-6時間)</li>
+                        <li>プール実習(1-2日)</li>
+                        <li>海洋実習(2日)</li>
+                        <li>筆記試験</li>
+                    </ol>
+                    <table>
+                        <tr>
+                            <th>料金に含まれるもの</th>
+                            <td>教材費・実習費・器材レンタル代・ライセンス申請料</td>
+                        </tr>
+                        <tr>
+                            <th>料金に含まれないもの</th>
+                            <td>交通費・宿泊費・追加ダイブ費(希望者のみ)</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-inner">
+                    <h2>申込フォーム</h2>
+                    <form actiomn="program.php" method="post">
+                        <dl>
+                            <dt>
+                                <label for="user-name">氏名</label>
+                            </dt>
+                            <dd>
+                                <input id="user-name" name="user-name" type="text">
+                            </dd>
+                            <dt>
+                                <label for="user-email">メールアドレス</label>
+                            </dt>
+                            <dd>
+                                <input id="user-email" name="user-email" type="text">
+                            </dd>
+
+                            <dt>性別</dt>
+                            <dd>
+                                <input type="radio" name="gender" id="gender-m" value="男性">
+                                <label for="gender-m">男性</label>
+
+                                <input type="radio" name="gender" id="gender-f"  value="女性">
+                                <label for="gender-m">女性</label>
+
+                                <input type="radio" name="gender" id="gender-n" value="その他">
+                                <label for="gender-m">その他</label>
+                            </dd>
+
+                        
+                            <dt>水泳経験はありますか</dt>
+                            <dd>
+                                <input id="swim-yes" type="radio" name="swim" value="はい">
+                                <label for="swim-yes">はい</label>
+                                <input id="swim-no" type="radio" name="swim" value="いいえ">
+                                <label for="swim-no">いいえ</label>
+                            </dd>
+
+                            <dt>泳げる泳法をチェックしてください</dt>
+                            <dd>
+                            <input type="checkbox" name="swim-type" id="freestyle">
+                            <label for="freestyle">クロール</label>
+                            <input type="checkbox" name="swim-type" id="breastroke">
+                            <label for="breastroke">平泳ぎ</label>
+                            <input type="checkbox" name="swim-type" id="backstroke">
+                            <label for="backstroke">背泳ぎ</label>
+                            <input type="checkbox" name="swim-type" id="butterfly">
+                            <label for="butterfly">バタフライ</label>
+
+                            </dd>
+
+                        </dl>
+                        <div class="form-submit">
+                            <button id="submit" name="submit" type="submit">申し込む</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <div class="form-img-area">
+                <img src="images/photo_02.jpg" alt="写真：サンゴ礁と熱帯魚">
+            </div>
+        </main>
+
+        <footer>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.299105028573!2d139.76028159999998!3d35.6942565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c1049646ffb%3A0x7abe3f67bddf1a86!2s1-ch%C5%8Dme-105%20Kanda%20Jinb%C5%8Dch%C5%8D%2C%20Chiyoda%20City%2C%20Tokyo%20101-0051!5e0!3m2!1svi!2sjp!4v1652779051315!5m2!1svi!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+            <address>
+                〒101-0051<br>
+                東京都千代田区神田神保町1丁目105<br>
+                00-0000-0000<br>
+                株式会社MdN DIVE
+            </address>
+            <small>&copy; MdN Coporation.</small>
+        </footer>
+    </div>
+</body>
+</html>
