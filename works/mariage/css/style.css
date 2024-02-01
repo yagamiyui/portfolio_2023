@@ -1,0 +1,550 @@
+@charset "utf-8";
+
+
+html{
+    font-size: 100%;
+    font-family: 'Sawarabi Mincho', serif;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+body{
+  background: #1a1919;
+}
+/*header*/
+
+/*========= 途中からハンバーガーメニューに変化するのためのCSS ===============*/
+
+/*========= ボタンのためのCSS ===============*/
+
+/*ボタン全体の形状*/
+.openbtn1{
+    /*はじめは非表示に*/
+  display: none;
+    /*ボタンの位置*/
+  position:fixed;
+  top:10px;
+  right: 10px;
+  z-index: 999;
+    /*ボタンの形状*/
+  background:#666;
+  cursor: pointer;
+    width: 50px;
+    height:50px;
+  border-radius: 5px;
+}
+
+/*ボタンのアイコン設定*/
+.openbtn1 span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+  background-color: #fff;
+    width: 45%;
+  }
+
+.openbtn1 span:nth-of-type(1) {
+  top:15px; 
+}
+
+.openbtn1 span:nth-of-type(2) {
+  top:23px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+  top:31px;
+}
+
+/*activeクラスが付与された後のボタンのアイコン設定*/
+.openbtn1.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn1.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+/*fadeDownクラスが付与された後のボタンの出現アニメーション設定*/
+.fadeDown {
+    animation-name: fadeDownAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    display: block;
+}
+@keyframes fadeDownAnime{
+  from {
+    opacity: 0;
+  transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+
+/*========= ヘッダーナビゲーションのためのCSS ===============*/
+
+/*==ヘッダーの形状*/
+#header{
+  height: 70px;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:#1a1919;
+  color:#fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/*.doneクラスがついたヘッダー*/
+#header.dnone {
+  opacity: 0;/*透過0にして非表示に*/
+}
+
+/*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたら*/
+#header.dnone.panelactive {
+  opacity: 1;/*不透明にして出現*/
+}
+
+
+/*==ヘッダーのテキストナビゲーションの形状*/
+#g-navi ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+#g-navi ul li a{
+  display: block;
+  text-decoration: none;
+  font-size: 25px;
+  color: #666;
+  padding:10px;
+}
+
+#g-navi ul li.current a,
+#g-navi ul li a:hover{
+  color:#fff; 
+}
+
+/*.doneクラスがついたヘッダーのテキストナビゲーションの形状*/
+#header.dnone #g-navi{
+    /*固定位置にして最背面に*/
+    position:fixed;
+  top: 0;
+    left: 0;
+  z-index: -1;
+    /*高さと幅*/  
+  width:100%;
+  height: 100vh;
+    /*天地中央＆テキスト中央揃え*/  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+    /*はじめは透過0に*/  
+    opacity: 0;
+  transition: all 0.4s;
+}
+
+/*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたナビゲーションの形状*/
+#header.dnone.panelactive #g-navi{
+  opacity: 1;/*不透明に*/
+  z-index:3;/*最前面に*/
+  background:#eee;
+}
+
+#header.dnone.panelactive #g-navi ul{
+  display:block;/*flexの横並びをblockにして縦並びに*/
+}
+
+
+/*リストの形状*/
+
+#header.dnone.panelactive #g-navi li a{
+  color: #333;
+  text-decoration: none;
+  padding:10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  transition:all 0.3s;
+}
+
+section{
+    position: relative;
+    z-index: 1;
+}
+
+
+
+/* HOME*/
+.home-content{
+    text-align: center;
+}
+
+/*背景画像*/
+.big-bg{
+    background-size: cover;
+    background-position: center top;
+}
+#home{
+    background-image: url(../images/haikei1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+}
+
+/*about*/
+#about{
+    padding:200px 0;
+    background:url(../images/black3.jpg) ;
+}
+.about h2{
+    font-size: 45px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 50px;
+}
+.about p{
+  font-size: 25px;
+    text-align: center;
+    color: rgb(201, 201, 201);
+}
+
+/*system*/
+#system{
+    padding:100px 0;
+    background:rgb(221, 221, 216);
+}
+.system h2{
+    font-size: 45px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+th,td {
+    text-align: center;
+    border: solid 2px;              /* 枠線指定 */
+    padding: 50px;
+    width:  300px;              /* 幅指定 */
+    height: 90px;               /* 高さ指定 */
+    font-size: 20px;
+}
+table {
+    margin: auto;
+    border-collapse:  collapse;     /* セルの線を重ねる */
+}
+.system th{
+    background-color: rgb(173, 160, 144);
+
+}
+.system td{
+    background-color: white;
+}
+.system p{
+    text-align: center;
+}
+.system .tyuui{
+    font-size: small;
+}
+
+
+/*access*/
+#access{
+    padding: 80px 0;
+
+    background: url(../images/black3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#access .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.location-info{
+    width: 30%;
+}
+.location-info h2{
+    font-size: 45px;
+    color: white;
+    text-align: center;
+}
+.location-info p{
+    padding: 12px 10px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 3px;
+    line-height: 2;
+    font-size: 20px;
+}
+.location-map{
+    width: 70%;
+    margin-right: 10px;
+}
+/*iframe*/
+iframe{
+    width: 100%;
+}
+
+
+/*cast*/
+#cast{
+    padding:80px 20px 50px;
+    background-color: rgb(221, 221, 216);
+}
+#cast h2{
+    font-size: 45px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+.grid{
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3, minmax(200px,1fr));
+    margin-top: 6%;
+    margin-bottom: 50px; 
+}
+
+/*news*/
+
+#news{
+    background: url(../images/black3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+}
+#news h2{
+    font-size: 45px;
+    color: rgb(255, 255, 255);
+    text-align: start;
+}
+ul.newsList {
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: 1px dotted #999;
+    padding: 10px 0;
+    }
+    
+    ul.newsList li {
+    display: block;
+    margin: 10px 10px;
+    color: white;
+    }
+    
+    ul.newsList li:nth-child(-n + 3) {
+    flex-basis: 130px;
+    }
+    
+    ul.newsList li:nth-child(2) {
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 10px;
+    text-align: center;
+    background-color: #527b8b;
+    }
+    
+    ul.newsList li:nth-child(3) {
+    flex-basis: auto;
+    }
+
+    /*sns*/
+    #sns{
+      background-color: #1a1919;
+    }
+    .contact-sns{
+      display: flex;
+      justify-content: center;
+  }
+  .contact-sns a{
+      width: 3.75rem;
+      height: 3.75rem;
+      display: inline-block;
+      margin: 0 0.5rem;
+      font-size: 2rem;
+      padding: 0.75rem 0 0 0.125rem;
+      color: #555;
+  }
+  
+
+/*footer*/
+footer{
+    background: #1a1919;
+}
+footer p{
+    color: white;
+    font-size: 0.875rem;
+}
+footer h2{
+    color: white;
+    text-align: left;
+    margin-left: 10px;
+}
+
+
+/*========= ローディング画面のためのCSS ===============*/
+#splash {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #333;
+	z-index: 9999999;
+	text-align:center;
+	color:#fff;
+}
+
+#splash-logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*========= 画面遷移のためのCSS ===============*/
+
+/*画面遷移アニメーション*/
+.splashbg{
+    display: none;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg{
+    display: block;
+    content: "";
+    position:fixed;
+	z-index: 999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+	left: 0;
+    transform: scaleY(0);
+    background-color: #777777;/*伸びる背景色の設定*/
+    background-image: url(../images/kirikae1.png);
+    background-size: cover;
+	animation-name:PageAnime;
+	animation-duration:1.2s;
+	animation-timing-function:ease-in-out;
+	animation-fill-mode:forwards;
+
+}
+
+@keyframes PageAnime{
+	0% {
+		transform-origin:bottom;
+		transform:scaleY(0);
+	}
+	50% {
+		transform-origin:bottom;
+		transform:scaleY(1);
+	}
+	50.001% {
+		transform-origin:top;
+	}
+	100% {
+		transform-origin:top;
+		transform:scaleY(0);
+	}
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+
+#container{
+	opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container{
+	animation-name:PageAnimeAppear;
+	animation-duration:1s;
+	animation-delay: 0.8s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}
+
+
+
+
+
+
+/*モバイル対応*/
+@media screen and (max-width:480px) {
+    .page-title{
+        font-size: 2.5rem;
+    }
+  
+
+    /*header*/
+  
+    #header{
+      height: 100px;
+      width:100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background:#1a1919;
+      color:#fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /*cast*/
+    .grid{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+    }
+    /*access*/
+    /*access*/
+#access{
+  padding: 50px 0;
+  
+}
+#access .wrapper{
+  display: block;
+  flex-flow: column;
+}
+.location-info{
+  width: 100%;
+}
+.location-info h2{
+  font-size: 45px;
+  color: white;
+  text-align: center;
+}
+.location-map{
+  margin-left: 20px;
+  width: 90%;
+}
+
