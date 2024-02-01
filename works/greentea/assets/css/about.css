@@ -1,0 +1,24 @@
+@import "https://unpkg.com/ress/dist/ress.min.css";
+*{
+    box-sizing: border-box;
+}
+
+/* header */
+header{
+    background: #b38d7d;
+    padding: 1rem 0;
+}
+header h1{
+    text-align: left;
+}
+header .logo{
+    width: 25rem;
+}
+
+
+/* footer */
+footer{
+    background: #b38d7d;
+    padding: 2rem 0;
+    text-align: center;
+}
