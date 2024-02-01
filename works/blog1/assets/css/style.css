@@ -1,0 +1,140 @@
+@charset "UTF-8";
+@import "https://unpkg.com/ress/dist/ress.min.css";
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body{
+  background: rgb(146, 144, 144);
+  text-align: center;
+  line-height: 1;
+  font-family: "Zen Maru Gothic" , sans-serif;
+  font-size: 1.6em;
+}
+
+a{
+  text-decoration: none;
+}
+a:hover{
+  opacity: 0.8;
+}
+
+header,
+footer{
+  background: rgb(0, 0, 0);
+  padding: 20px;
+  color: white;
+}
+
+main{
+  color: white;
+  padding: 80px 0 100px;
+}
+
+section{
+  width: 900px;
+  margin: auto;
+}
+section + section{
+  margin-top: 80px;
+}
+section p{
+  width: 80%;
+  margin: auto;
+  line-height: 3;
+}
+section .setumei{
+  margin-top: 80px;
+  width: 100%;
+  margin-left: 0;
+  line-height: 2.5;
+  text-align: left;
+}
+
+h1{
+  letter-spacing: 0.5em;
+  margin-right: -0.5em;
+  font-size: 50px;
+  margin-bottom: 1em;
+}
+
+h2{
+  letter-spacing: 0.5em;
+  margin-right: -0.5em;
+  font-size: 40px;
+  margin-bottom: 0.8em;
+}
+
+/* 
+
+fist-view
+
+*/
+#first-view{
+  position: relative;
+}
+
+/* 
+シェアボタン
+ */
+ .btns{
+   display: flex;
+   justify-content: space-between;
+   width: 800px;
+   margin: 60px auto 0;
+ }
+
+ .btn_share{
+   display: block;
+   background: white;
+   border: 4px solid #212121;
+   color: #212121;
+   width: 48%;
+   padding: 20px 0;
+   font-size: 20px;
+   font-weight: 500;
+ }
+.btn_share .fab{
+  font-size: 30px;
+  margin-right: 0.5em;
+}
+.btn_share .fa-twitter{
+  vertical-align: middle;
+}
+
+/* 
+
+about
+
+*/
+.youtube{
+  aspect-ratio: 16/9;
+  margin-top: 80px;
+}
+.youtube iframe{
+  width: 100%;
+  height: 100%;
+}
+
+.logo-mark{
+  margin: 140px 0;
+  border-radius: 50%;
+}
+
+/* 
+
+product
+
+*/
+.imgs{
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid white;
+  padding: 30px;
+  margin-top: 40px;
+}
+
