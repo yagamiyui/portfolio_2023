@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/work.css">
+    <title>YAGAMIportfolio/CONTACT</title>
+    <script type="text/javascript">
+      let submitted = false;
+  </script>
+  <iframe
+      name="hidden_iframe"
+      id="hidden_iframe"
+      style="display: none"
+      onload="if(submitted){window.location='THANKS.html';}"
+  ></iframe>
+  </script>
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+          <a href="index.html" class="logo">
+            <img src="img/logo.png">
+          </a>
+          <a href="ABOUT.html" class="menu">About</a>
+          <a href="WORKS.html"class="menu">Works</a>
+          <a href="RAMEN.html"class="menu">Ramen</a>
+          <a href="CONTACT.html" class="menu">contact</a>
+        </nav>
+      </header>
+
+      <h1>Contact</h1>
+      <p>ご意見などございましたら<br>
+    下記のフォームにご入力ください。</p>
+
+<section id="contact">
+    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSco0kn2pY8w-OaGvdpH95HvI7QnkJLgVu9HFayYjidxOO9k0g/formResponse"
+    method="POST"    target="hidden_iframe"
+    onsubmit="submitted=true;"
+    class="c-form">
+      <div class="c-form__item">
+        <label class="c-form__label" for="field-name"
+          >Name</label
+        >
+        <input
+        name="entry.865039143"
+          class="c-form__input"
+          id="field-name"
+          placeholder="yamada hanako"
+          type="text"
+          required="required"
+        />
+      </div>
+      <div class="c-form__item">
+        <label class="c-form__label" for="field-mail"
+          >Mail</label
+        >
+        <input
+        name="entry.585640921"
+          class="c-form__input"
+          id="field-mail"
+          placeholder="sample@gmail.com"
+          type="email"
+          required="required"
+        />
+      </div>
+      <div class="c-form__item">
+        <label class="c-form__label" for="field-message">Message</label>
+        <textarea
+        name="entry.329633234"
+          class="c-form__input"
+          id="field-message"
+          placeholder="お問い合わせ内容"
+        ></textarea>
+      </div>
+      <div class="c-form__submit">
+        <button type="submit">send</button>
+      </div>
+    </form>
+</section>
+
+      <footer class="footer">
+        <ul class="md-flex">
+          <li><a href="ABOUT.html" class="menu">About</a></li>
+          <li><a href="WORKS.html"class="menu">Works</a></li>
+          <li><a href="RAMEN.html"class="menu">Ramen</a></li>
+          <li><a href="CONTACT.html" class="menu">contact</a></li>
+        </ul>
+        <p class="copyright">© 2024 yagaimyui.</p>
+      </footer>
+
+      </body>
+      </html>
