@@ -42,7 +42,7 @@ a{
 .db{
   height: 50vh;
   background-color: rgb(255, 221, 227);
-    background-image: url(/img/pawel-czerwinski-1k9lY4WWXJ0-unsplash.jpg);  
+    background-image: url(../img/pawel-czerwinski-1k9lY4WWXJ0-unsplash.jpg);
 }
 h2{
   margin-top: 40px;
