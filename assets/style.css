@@ -61,7 +61,7 @@ ruby{
 /* Policy */
 #policy{
   background-color: white;
-  height: 70vh;
+  margin: auto;
 }
 .flex-1{
   background-color: white;
@@ -78,22 +78,22 @@ ruby{
   display: flex;
   flex-direction: column;
   width: 30%;
-  margin: 20PX;
 }
 img{
   width: 220px;
   height: 186px;
 }
 p.txt{
-  margin: 10px;
+  margin: 5px;
+}
 
 /* Skill */
 #skill{
   background-color: rgb(255, 221, 227);
   background-image: url(/img/rupixen-com-p4yLvoXjymU-unsplash.jpg); 
   background-size: cover;
-  height: 85vh;
   text-align: center;
+  padding-bottom: 40px;
 }
 #skill h2{
   position: relative;
@@ -105,8 +105,6 @@ p.txt{
 }
 #skill img{
   width: 100%;
-  margin-bottom: 20px;
-  margin-top: 80px;
 }
 .flex-2{
   background-color: rgb(255, 255, 255);
@@ -114,12 +112,11 @@ p.txt{
   margin: 100px 300px 100px 300px;
 }
 .flex-2 ul{
-  height: 55vh;
   display: flex;
-  justify-content: space-between;
+  padding-bottom: 30px;
 }
 .flex-2 li{
-  height: 50vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   width:50%;
@@ -254,26 +251,18 @@ h4{
 
  @media (max-width: 2010px) {
     /* Skill */
-#skill img{
-  width: 100%;
-  margin-bottom: 20px;
-  margin-top: 50px;
-}
-#skill p{
-  margin-bottom: 5px;
+p.txt{
+  margin: 5px;
 }
   }
   @media (max-width: 1420px) {
 /* Skill */
-#skill{
-  height: 95vh;
-}
 #skill img{
 display: none;
 }
 .flex-2{
   background-color: rgb(255, 255, 255);
-  margin: 100px 200px 100px 200px;
+  margin: 100px 100px 100px 100px;
 }
 .flex-2 ul{
   display: flex;
@@ -286,10 +275,9 @@ display: none;
   flex-direction: row;
   align-content: center;
   justify-content: space-between;
-  height: 10vh;
+  height: 20vh;
   width:100%;
   margin: 5px;
-  box-shadow: 0px 10px 12px -6px rgba(0, 0, 0, 0.3);
 }
 h4{
   margin-left: 30px;
@@ -321,3 +309,4 @@ h4{
   margin-right:0;
   }
 
+}
