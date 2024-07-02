@@ -84,7 +84,8 @@ img{
   width: 220px;
   height: 186px;
 }
-
+p.txt{
+  margin: 10px;
 
 /* Skill */
 #skill{
